@@ -1,9 +1,11 @@
-#include <iostream>
-#define MAX 20
+// Non recursive bubble sort algorithm.
+// The bubble sort algorithms is used to sort a list not in the fastes way, but, problably, in the "most human" way.
+// The complexity of the algorithm is O(n^2).
+#include <iostream>	// For basic input/output system.
 
 using namespace std;
 
-void bubbleSort(int l[], int s)
+void bubbleSort(int l[], int s) // List and size (remember that lists are passed by reference because a list is a pointer).
 {
 	int temp;
 	
@@ -11,9 +13,9 @@ void bubbleSort(int l[], int s)
 	{
 		for(int j = 1; j < s; j++)
 		{
-			if(l[j-1] > l[j])
+			if(l[j-1] > l[j]) 
 			{
-				temp = l[j];
+				temp = l[j];	// Swapping the two elements.
 				l[j] = l[j-1];
 				l[j-1] = temp;
 			}
@@ -23,20 +25,23 @@ void bubbleSort(int l[], int s)
 
 int main()
 {
-   int arr[MAX];
-   int n;
-   cin >> n;
-    
-   for(int i = 0; i < n; i++)
-   {
+   	int n;
+   	cin >> n;
+	int arr[n];
+	
+	// Input. 
+   	for(int i = 0; i < n; i++)
+   	{
        cin >> arr[i];
-   }
+   	}
+	
+	// Sorting.
+   	bubbleSort(arr, n);
     
-   bubbleSort(arr, s);
-    
-   cout << "Sorted Array: " << endl;
-   for(int i = 0; i < n; i++)
-   {
+	// Output.
+   	cout << "Sorted Array: " << endl;
+   	for(int i = 0; i < n; i++)
+   	{
         cout << arr[i] << " ";   
-   }
+   	}
 }
