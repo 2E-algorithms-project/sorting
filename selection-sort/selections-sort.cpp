@@ -30,31 +30,31 @@ int main()
 	return 0;
 }
 
-void selectionSort(int l[], int s) 
+void selectionSort(int arr[], int n) 
 {
-	int maxValue, maxValuePos; // for storing value and position of max (to then insert at the end of the list).
-	int indexLast = s; // (it should be -1 but we use it as boundary).
-	int temp; // for swapping values
+	int minValue, minValuePos; // for storing minimum value and the minimum value position
+	int indexEnd = 0;  // the index of the end of the sorted array
 	
-	for(int i = 0; i < s; i++)
+	
+	while(indexEnd < n) 
 	{
-		maxValue = l[0]; // giveing maxValue and maxValuePos the value 0 as default
-		maxValuePos = 0;
+		minValue = arr[indexEnd];  // setting maxValue and maxValuePos by default to pos = 0 and val = 0;
+		minValuePos = indexEnd;
 		
-		for(int j = 0; j < indexLast; j++)
+		for(int i = indexEnd; i < n; i++)
 		{
-			if(l[j] > maxValue)
+			if(arr[i] < arr[minValuePos]) // checking if the value in the i position in arr is less than the minimum value
 			{
-				maxValue = l[j];
-				maxValuePos = j;
+				minValue = arr[i];
+				minValuePos = i;
 			}
 		}	
+					
 		// Swapping.
-		temp = l[indexLast]; 
-		l[indexLast] = maxValue;
-		l[maxValuePos] = temp;
+		arr[minValuePos] = arr[indexEnd]; 
+		arr[indexEnd] = minValue; 
 		
-		// Moving boundary to boundary-1.
-		indexLast--;
+		// Adding one to the end of sorted list
+		indexEnd++;
 	}	
 }
