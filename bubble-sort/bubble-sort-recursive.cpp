@@ -1,5 +1,4 @@
 //Recursive Bubble Sort algorithm
-
 #include <iostream> // For basic Input/Output stream
 #define MAX 100  // Max numbers of the array.
 
@@ -7,9 +6,6 @@ using namespace std;
 
 // Main recursive function.
 void bubbleSortRecursive(int n, int array[]);
-
-// inner recursive function.
-// int innerLoop(int n, int array[]);
 
 int main()
 {
@@ -51,24 +47,4 @@ void bubbleSortRecursive(int n,int array[]){
 	bubbleSortRecursive(n-1 , array); 
 }
 
-// int innerLoop(int n,int array[]){
-	
-// 	static int j=0;
-// 	int temp;
-	
-// 	if(j<n-1){
-// 		if(array[j]>array[j+1]){
-// 			temp=array[j]; // Swapping Variables.
-// 			array[j]=array[j+1];
-// 			array[j+1]=temp;
-// 		}
-			
-// 		j++;
-		
-// 		return innerLoop(n,array);
-// 	}
-	
-// 	j=0;
-	
-// 	return bubbleSortRecursive(n,array);
-// }
+
