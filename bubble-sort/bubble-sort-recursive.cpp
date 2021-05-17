@@ -31,7 +31,7 @@ int main()
 void bubbleSortRecursive(int n,int array[]){
 	
 	//If the size of working array is 1 return
-	if(n == 1) 
+	if(n == 0) 
 		return;
 
 	// In 1 pass, last element is at its sorted position
