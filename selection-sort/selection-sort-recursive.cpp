@@ -1,50 +1,57 @@
-//selection_sort with recursion
-#include <iostream>   //input/output directive
-#define MAX  100       //MAX is the max number of numbers inn the array
- 
-using namespace std;
+//Selection sort with recursion.
 
-void selection(int n,int arr[]);           //function for the selection
+#include <iostream> // Input/Output directive.
+#define MAX  100 // MAX is the max number of numbers inn the array.
+ 
+using namespace std; 
+
+void selection(int n,int arr[]); // Function for the selection.
 
 int main()
 {
 	int n, arr[MAX];
-	cin>>n;
+	cin >> n;
 	
-	for(int i=0;i<n;i++){            //input of the array
-		cin>>arr[i];
+	// Input.
+	for(int i = 0; i < n; i++)
+	{ 
+		cin >>arr[i];
 	}
 	
+	// Sorting.
 	selection(n,arr);
 	
-	for(int i=0;i<n;i++){           //output of the array
-		cout<<arr[i]<<" ";
+	// Output.
+	cout << "Insertion sort (recursive): " << endl;
+	for(int i = 0; i < n; i++){           
+		cout << arr[i] << " ";
 	}
 	
 	return 0;
 }
 
-void selection(int n,int arr[])          //function for the selection
+void selection(int n,int arr[])         
 {
-	static int j=0;                         //counter of the for loops
-	int pos_min=j;                            // this variable contains the position of the min value          setted at the first position of the for loop
-	int temp=arr[j];                         // this variable contains the min value                           setted at the first value of the for loop
+	static int indexEnd = 0; //counter of the for loops
+	int minValuePos = indexEnd; // this variable contains the position of the min value          setted at the first position of the for loop
+	int minValue = arr[indexEnd]; // this variable contains the min value                        setted at the first value of the for loop
 	
-	for(int i=j;i<n;i++){
-		if(arr[i]<arr[pos_min]){
-			
-			pos_min=i;
-			temp=arr[i];
+	for(int i = indexEnd; i < n; i++){
+		if(arr[i]<arr[minValuePos])
+		{
+			minValuePos = i;
+			minValue = arr[i];
 			
 		}
 	}
 	
-	arr[pos_min]=arr[j];                    //exchange of values
-	arr[j]=temp;                           //exchange of values
-	j++; 
+	arr[minValuePos] = arr[indexEnd];                    //exchange of values
+	arr[indexEnd] = minValue;                           //exchange of values
+	indexEnd++; 
 	                                 
-	if(j<n){
-	selection(n,arr);              //recursion
+	if(indexEnd < n)
+	{
+		selection(n, arr);              //recursion
 	}
 	
 	return;
