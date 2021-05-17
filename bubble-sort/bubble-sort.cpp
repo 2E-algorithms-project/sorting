@@ -25,7 +25,7 @@ int main()
    	bubbleSort(arr, n);
     
 	// Output.
-   	cout << "Sorted Array: " << endl;
+   	cout << "Bubble Sort: " << endl;
    	for(int i = 0; i < n; i++)
    	{
         cout << arr[i] << " ";   
@@ -34,7 +34,7 @@ int main()
 
 void bubbleSort(int l[], int s) 
 {
-	int temp;
+	int temp; // Needed for swapping values.
 	
 	for(int i = 0; i < s; i++)
 	{
