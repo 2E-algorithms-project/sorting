@@ -1,2 +1,6 @@
 # sort
-Sort algorithms
+Sorting algorithms
+
+- Bubble Sort
+- Insertion Sort
+- Selection Sort
