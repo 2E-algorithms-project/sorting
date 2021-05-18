@@ -32,27 +32,24 @@ int main()
 
 void selectionSort(int arr[], int n) 
 {
-	int minValue, minValuePos; // for storing minimum value and the minimum value position
+	int minValuePos; // for storing the minimum value's position
 	int indexEnd = 0;  // the index of the end of the sorted array
 	
 	
 	while(indexEnd < n) 
 	{
-		minValue = arr[indexEnd];  // setting maxValue and maxValuePos by default to pos = 0 and val = 0;
-		minValuePos = indexEnd;
+		minValuePos = indexEnd; // setting the minimumn value position by default at 0
 		
 		for(int i = indexEnd; i < n; i++)
 		{
 			if(arr[i] < arr[minValuePos]) // checking if the value in the i position in arr is less than the minimum value
 			{
-				minValue = arr[i];
 				minValuePos = i;
 			}
 		}	
 					
 		// Swapping.
-		arr[minValuePos] = arr[indexEnd]; 
-		arr[indexEnd] = minValue; 
+		swap(arr[minValuePos], arr[indexEnd];
 		
 		// Adding one to the end of sorted list
 		indexEnd++;
