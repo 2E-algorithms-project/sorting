@@ -33,7 +33,7 @@ int main()
 
 void insertionSort(int l[], int s)
 {
-	int temp, j;
+	int j;
 	
 	for(int i = 1; i < s; i++)
 	{
@@ -42,9 +42,7 @@ void insertionSort(int l[], int s)
 			j = i;
 			while(!(l[j] > l[j-1] && l[j] < l[j]+1)) // Puts the number in the correct position.
 			{
-				temp = l[j-1]; // Swapping.
-				l[j-1] = l[j];
-				l[j] = temp;
+				swap(l[j-1], l[j]);
 				j--;
 			}
 		}
