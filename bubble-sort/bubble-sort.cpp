@@ -34,8 +34,6 @@ int main()
 
 void bubbleSort(int l[], int s) 
 {
-	int temp; // Needed for swapping values.
-	
 	for(int i = 0; i < s; i++)
 	{
 		for(int j = 1; j < s; j++)
