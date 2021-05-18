@@ -34,20 +34,15 @@ void selection(int n,int arr[])
 {
 	static int indexEnd = 0; // Counter of the for loops.
 	int minValuePos = indexEnd; // This variable contains the position of the min value.          setted at the first position of the for loop.
-	int minValue = arr[indexEnd]; // This variable contains the min value.                        setted at the first value of the for loop.
 	
 	for(int i = indexEnd; i < n; i++){
 		if(arr[i]<arr[minValuePos])
 		{
 			minValuePos = i;
-			minValue = arr[i];
-			
 		}
 	}
-	
-	arr[minValuePos] = arr[indexEnd]; // Exchange of values.
-	arr[indexEnd] = minValue; // Exchange of values.
-	indexEnd++; 
+	swap(arr[minValuePos], arr[indexEnd]); // swapping
+	indexEnd++; // adding 1 to limit of sorted list
 	                                 
 	if(indexEnd < n)
 	{
