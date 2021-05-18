@@ -30,7 +30,7 @@ int main()
 
 void bubbleSortRecursive(int n,int arr[]){
 	
-	//If the size of working array is 1 return.
+	//If the size of working array is 0 return.
 	if(n == 0) 
 		return;
 
