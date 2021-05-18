@@ -1,4 +1,4 @@
-# sort
+# sorting
 Sorting algorithms
 
 - Bubble Sort (recursive and not)
