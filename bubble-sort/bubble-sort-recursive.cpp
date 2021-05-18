@@ -28,7 +28,7 @@ int main()
 	return 0;
 }
 
-void bubbleSortRecursive(int n,int array[]){
+void bubbleSortRecursive(int n,int arr[]){
 	
 	//If the size of working array is 1 return.
 	if(n == 0) 
@@ -36,15 +36,13 @@ void bubbleSortRecursive(int n,int array[]){
 
 	// In 1 pass, last element is at its sorted position.
 	for(int i = 0; i < n-1; i++){ 
-		if(array[i] > array[i+1]){
-			int temp = array[i];
-			array[i] = array[i+1];
-			array[i+1] = temp;
+		if(arr[i] > arr[i+1]){
+			swap(arr[i], arr[i+1]);
 		}
 	}
 
 	// Recur for the remaining subarray.
-	bubbleSortRecursive(n-1 , array); 
+	bubbleSortRecursive(n-1 , arr); 
 }
 
 
