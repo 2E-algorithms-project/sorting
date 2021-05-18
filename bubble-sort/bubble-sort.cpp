@@ -42,9 +42,7 @@ void bubbleSort(int l[], int s)
 		{
 			if(l[j-1] > l[j]) 
 			{
-				temp = l[j];	// Swapping the two elements.
-				l[j] = l[j-1];
-				l[j-1] = temp;
+				swap(l[j-1], l[j]);
 			}
 		}
 	}
