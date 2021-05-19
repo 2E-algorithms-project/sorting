@@ -2,7 +2,7 @@
 Sorting algorithms
 
 - Bubble Sort (recursive and not)
-- Insertion Sort (recursive and not)
+- Insertion Sort (non recursive)
 - Selection Sort (recursive and not)
 - Quick Sort (not added yet)
 
