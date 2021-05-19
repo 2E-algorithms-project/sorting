@@ -35,15 +35,15 @@ void insertionSort(int l[], int s)
 {
 	int j;
 	
-	for(int i = 1; i < s; i++)
+	for(int i = s-2; i >= 0; i--)
 	{
-		if(l[i] < l[i-1]) // If the element is not in order.
+		if(l[i] > l[i+1]) // If the element is not in order.
 		{
 			j = i;
-			while(!(l[j] > l[j-1] && l[j] < l[j]+1)) // Puts the number in the correct position.
+			while(!(l[j] > l[j-1] && l[j] < l[j+1]) && j+1 != s) // Puts the number in the correct position.
 			{
-				swap(l[j-1], l[j]);
-				j--;
+				swap(l[j], l[j+1]);
+				j++;
 			}
 		}
 	}
