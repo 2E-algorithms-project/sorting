@@ -49,7 +49,7 @@ void selectionSort(int arr[], int n)
 		}	
 					
 		// Swapping.
-		swap(arr[minValuePos], arr[indexEnd];
+		swap(arr[minValuePos], arr[indexEnd]);
 		
 		// Adding one to the end of sorted list
 		indexEnd++;
